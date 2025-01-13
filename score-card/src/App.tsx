@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Header from './components/Header';
-import FrontPage from './pages/FrontPage';
+import FrontPage from './pages/Front';
 import Games from './pages/Games';
 import Scores from './pages/Scores';
 import DiscGolf from './pages/games/DiscGolf';
