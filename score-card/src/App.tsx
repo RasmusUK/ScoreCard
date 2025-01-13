@@ -1,13 +1,20 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
-import GridCards from './components/GridCards';
+import Header from './components/Header';
+import FrontPage from './pages/FrontPage';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <GridCards />
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Header />
+        <main>
+          <Routes>
+            <Route path="/" element={<FrontPage />} />
+          </Routes>
+        </main>
+      </div>
+    </Router>
   );
 }
 
