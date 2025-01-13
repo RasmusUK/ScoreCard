@@ -4,17 +4,21 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import ButtonBase from '@mui/material/ButtonBase';
+import { useNavigate } from 'react-router-dom';
 
 interface MediaCardProps {
     title: string;
     image: string;
+    route: string;
 }
 
-const MediaCard: FC<MediaCardProps> = ({ title, image }) => {
+const MediaCard: FC<MediaCardProps> = ({ title, image, route }) => {
+  const navigate = useNavigate();
+
   return (
     <ButtonBase
     onClick={() => {
-      alert('Card clicked!');
+      navigate(route);
     }}
     >
         <Card sx={{ display: "flex", alignItems: 'center', borderRadius: 8, height: 115}}>
@@ -25,7 +29,7 @@ const MediaCard: FC<MediaCardProps> = ({ title, image }) => {
             </CardContent>
             <CardMedia
                 component="img"
-                sx={{ width: 150 }}
+                sx={{ height: '80%', width: 'auto', objectFit: 'contain' }}
                 image={image}
                 title={title}
             />

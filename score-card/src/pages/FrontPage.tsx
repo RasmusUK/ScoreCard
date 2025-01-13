@@ -1,10 +1,12 @@
-import GridCards from "../components/GridCards";
+import Games from "./Games";
+import Scores from "./Scores";
 
 
 export default function FrontPage() {
   return (
     <div>
-      <GridCards />
+      <Games />
+      <Scores />
     </div>
   );
 }
